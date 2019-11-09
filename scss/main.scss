@@ -1,0 +1,224 @@
+@import 'vars.scss';
+@import 'reset.scss';
+@import 'mixins.scss';
+
+
+.header {
+    text-align: center;
+    color: $colorSecondary;
+    padding: 110px 0 0 0;
+    font-size: 18px;
+}
+
+ .mainer {
+     width: 1200px;
+     display: flex;
+     border-top: 1px solid $colorBase;
+     margin: 0 auto;
+     position: relative;
+     
+ }  
+ .mainer::before {
+     content: '';
+     width: 0;
+     height: 0;
+     border-bottom: 50px solid $colorBase;
+     border-left: 25px solid transparent;
+     border-right: 25px solid transparent;
+     transform: rotate(-90deg);
+     margin: 25% 0 0 0;
+ }
+ .mainer::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid $colorBase;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    transform: rotate(90deg);
+    margin: 25% 0 0 0;
+}
+.block-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: -10px 0 0 0;
+    background-color: white;
+    padding: 0 20px;
+}
+.block-first {
+    width: 557px;
+    height: 560px;
+    margin: 50px 0;
+    border-right: 1px solid $colorBase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-photo {
+    width: 418px;
+    height: 418px;
+    border: 1px solid $colorBase;
+    margin: 0 40px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block__photo-image {
+    width: 388px;
+    height: 388px;
+    border: 1px solid $colorBase;
+    background-image: url(../images/foto.jpg);
+}
+
+// second
+
+.block-second {
+    // border: 1px solid $colorBase;
+    width: 557px;
+    height: 560px;
+    margin: 50px 0;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.block-description {
+    width: 418px;
+    margin: 0 0 0 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.block__name {
+    font-family: $fontH;
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    color: #666666;
+    margin: 92px 0 34px 0;
+    position: relative;
+    z-index: 1;
+    padding:  0 0 34px 0;
+}
+.block__name:before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 0;
+    height: 1px;
+    width: 100px;
+    border-bottom: 1px solid $colorBase;
+}
+
+.block__post {
+    font-size: 24px;
+    color: #666666;
+}
+
+.block__social {
+    display: flex;
+    justify-content: center;
+    margin: 34px 0;
+}
+.block__social-facebook,
+.block__social-twitter,
+.block__social-google,
+.block__social-linkedin {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #CCCCCC;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+.block__social-facebook:hover,
+.block__social-twitter:hover,
+.block__social-google:hover,
+.block__social-linkedin:hover {
+    color: #666666;
+    border-color: #666666;
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.block__social-facebook:active,
+.block__social-twitter:active,
+.block__social-google:active,
+.block__social-linkedin:active {
+    color: white;
+    border-color: white;
+    background-color: #535353;
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+.block__text {
+    width: 422px;
+    text-align: center;
+    color: #666666;
+    line-height: 24px;
+    position: relative;
+    z-index: 1;
+    padding: 0 0 24px 0;
+}
+.block__text:before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 0;
+    height: 1px;
+    width: 100px;
+    border-bottom: 4px solid $colorBase;
+}
+
+.block__link {
+    margin: 26px 0 0 0;
+}
+.block__link-button {
+    border: 1px solid $colorBase;
+    width: 120px;
+    height: 24px;
+    color: #666666;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+}
+.block__link-button:hover {
+    color: white;
+    background-color: #666666;
+    border: 1px solid $colorBase;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.block__link-button:active {
+    color: white;
+    background-color: #1f1e1e;
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+}
+
+.block-carousel {
+    display: flex;
+    position: absolute;
+    bottom :10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.block-carousel__slider {
+    width: 10px;
+    height: 10px;
+    border: 1px solid $colorBase;
+    border-radius: 50%;
+    background-color: $colorBase;
+    margin: 0 4px;
+}
+.block-carousel__slider--empty {
+    background-color: white;
+}
